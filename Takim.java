@@ -14,7 +14,7 @@ public class Takim {
         this.takim = takim;
     }
 
-    public void siralaVeBas(){
+    /*public void siralaVeBas(){
 
 
 
@@ -43,6 +43,19 @@ public class Takim {
 
         for(int i=0;i< takim.length;i++){
             System.out.println(takim[i].ozet());
+        }
+    }*/
+
+    public void siralaVeBas(){
+        for(int i=0;i<takim.length;i++){
+            for(int j=0;j<takim.length-1;j++){
+                if (takim[j].compareTo(takim[j + 1])==1) {
+                    Oyuncu temp;
+                    temp = takim[j];
+                    takim[j] = takim[j+1];
+                    takim[j+1] = temp;
+                }
+            }
         }
     }
 }

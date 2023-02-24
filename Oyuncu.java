@@ -38,4 +38,6 @@ public abstract class Oyuncu implements Comparable {
         this.compare = compare;
     }
 
+
+
 }

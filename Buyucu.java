@@ -39,7 +39,7 @@ public class Buyucu extends Oyuncu{
 
 
 
-    @Override
+    /*@Override
     public int compareTo(Object o) {
         Buyucu b = (Buyucu) o;
         if(this.getDeneyimPuani()>b.getDeneyimPuani())
@@ -48,5 +48,32 @@ public class Buyucu extends Oyuncu{
             return -1;
 
         return 0;
+    }*/
+    public int compareTo(Object obj){
+
+        Oyuncu o = (Oyuncu) obj;
+        if(this.getCompare()==o.getCompare()){
+            if(this.getCompare()==0){
+                if(this.getToplamHamleGucu()>o.getToplamHamleGucu())
+                    return 1;
+                if(this.getToplamHamleGucu()<o.getToplamHamleGucu())
+                    return -1;
+                return 0;
+
+            }
+            else{
+                if(this.getDeneyimPuani()>o.getDeneyimPuani())
+                    return 1;
+                if(this.getDeneyimPuani()<o.getDeneyimPuani())
+                    return -1;
+                return 0;
+            }
+        }
+        else{
+            if(this.getCompare()>o.getCompare())
+                return 1;
+            else
+                return -1;
+        }
     }
 }
